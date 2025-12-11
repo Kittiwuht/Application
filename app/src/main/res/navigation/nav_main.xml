@@ -6,11 +6,6 @@
     app:startDestination="@+id/homeFragment">
 
     <fragment
-        android:id="@+id/activity_main"
-        android:name="com.kittiwuht.applicationformaesuphanneemooyor.activity_main"
-        android:label="activity_main"
-        tools:layout="@layout/fragment_activity_main"/>
-    <fragment
         android:id="@+id/profitFragment"
         android:name="com.kittiwuht.applicationformaesuphanneemooyor.profitFragment"
         android:label="profitFragment"
@@ -20,4 +15,9 @@
         android:name="com.kittiwuht.applicationformaesuphanneemooyor.stockFragment"
         android:label="stockFragment"
         tools:layout="@layout/fragment_stock"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kittiwuht.applicationformaesuphanneemooyor.HomeFragment"
+        android:label="homeFragment"
+        tools:layout="@layout/fragment_home"/>
 </navigation>

@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/backButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,6 +135,16 @@
                         android:textStyle="bold"
                         tools:ignore="TouchTargetSizeCheck" />
 
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF9800"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="8dp"
+                        android:text="ตกลง"
+                        android:textColor="#8B4513"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -188,6 +198,17 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF9800"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="8dp"
+                        android:text="ตกลง"
+                        android:textColor="#8B4513"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -197,50 +218,6 @@
     </ScrollView>
 
     <!-- Bottom Navigation -->
-    <LinearLayout
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FF914D"
-        android:orientation="horizontal"
-        android:paddingVertical="12dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Photo Icon -->
-        <ImageButton
-            android:id="@+id/stockbutton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="20dp"
-            android:contentDescription="Stock"
-            android:background="@drawable/stock"
-            android:padding="12dp"/>
-
-        <!-- Calculator Icon -->
-        <ImageButton
-            android:id="@+id/profitbutton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="20dp"
-            android:contentDescription="Profit"
-            android:background="@drawable/profit"
-            android:padding="12dp"/>
-
-        <!-- Home Icon (Center, larger) -->
-
-        <!-- Report Icon -->
-        <ImageButton
-            android:id="@+id/homebutton"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/home"
-            android:contentDescription="Home"
-            android:padding="16dp" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
