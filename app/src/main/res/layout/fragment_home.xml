@@ -55,91 +55,48 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="20dp"
-        android:layout_marginBottom="100dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:cardBackgroundColor="#FFE4C4"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center_vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <!-- Product Info -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvProductName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="สต็อกเหลือน้อย"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
-
-                    <TextView
-                        android:id="@+id/tvCurrentStock"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="เหลือ: 5 ชิ้น"
-                        android:textSize="14sp"
-                        android:textColor="#FF5722"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" / "
-                        android:textSize="14sp"
-                        android:textColor="#999999"
-                        android:layout_marginHorizontal="4dp"/>
-
-                    <TextView
-                        android:id="@+id/tvMinStock"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ขั้นต่ำ: 10 ชิ้น"
-                        android:textSize="14sp"
-                        android:textColor="#666666"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- Status Badge -->
+            <!-- Header -->
             <TextView
-                android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="#FFE0B2"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="6dp"
-                android:text="เหลือน้อย"
-                android:textColor="#F57C00"
-                android:textSize="12sp"
+                android:text="ประวัติการเพิ่ม Stock"
+                android:textColor="#8B4513"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ScrollView for Stock Logs -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/stockLogsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Stock logs will be added here dynamically -->
+                </LinearLayout>
+
+            </ScrollView>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

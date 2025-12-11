@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     android:background="#FFC586">
 
-    <!-- Status Bar Area -->
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -110,6 +109,16 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/moo" />
 
+                    <!-- Product Name -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="หมูยอ"
+                        android:textColor="#8B4513"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
                     <!-- Dropdown Button -->
                     <TextView
                         android:layout_width="wrap_content"
@@ -118,30 +127,33 @@
                         android:background="@drawable/b1"
                         android:paddingHorizontal="20dp"
                         android:paddingVertical="8dp"
-                        android:text="จำนวนสินค้าคงเหลือ ▼"
+                        android:text="เพิ่มจำนวนสินค้า"
                         android:textColor="#8B4513"
                         android:textSize="14sp" />
 
-                    <!-- Stock Count -->
+                    <!-- Stock Input -->
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/editMooStock"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/b1"
                         android:paddingHorizontal="24dp"
-                        android:paddingVertical="8dp"
-                        android:text="500 ชิ้น"
+                        android:paddingVertical="12dp"
+                        android:hint="ใส่จำนวนที่ต้องการเพิ่ม"
+                        android:inputType="number"
                         android:textColor="#8B4513"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginBottom="12dp"/>
 
                     <Button
+                        android:id="@+id/btnMooConfirm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FF9800"
-                        android:paddingHorizontal="24dp"
+                        android:paddingHorizontal="32dp"
                         android:paddingVertical="8dp"
-                        android:text="ตกลง"
+                        android:text="เพิ่ม Stock"
                         android:textColor="#8B4513"
                         android:textSize="16sp"
                         android:textStyle="bold"/>
@@ -174,6 +186,16 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/orange" />
 
+                    <!-- Product Name -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="น้ำส้ม"
+                        android:textColor="#8B4513"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
                     <!-- Dropdown Button -->
                     <TextView
                         android:layout_width="wrap_content"
@@ -182,29 +204,33 @@
                         android:background="@drawable/b1"
                         android:paddingHorizontal="20dp"
                         android:paddingVertical="8dp"
-                        android:text="จำนวนสินค้าคงเหลือ ▼"
+                        android:text="เพิ่มจำนวนสินค้า"
                         android:textColor="#8B4513"
                         android:textSize="14sp" />
 
-                    <!-- Stock Count -->
+                    <!-- Stock Input -->
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/editOrangeStock"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/b1"
                         android:paddingHorizontal="24dp"
-                        android:paddingVertical="8dp"
-                        android:text="200 ชิ้น"
+                        android:paddingVertical="12dp"
+                        android:hint="ใส่จำนวนที่ต้องการเพิ่ม"
+                        android:inputType="number"
                         android:textColor="#8B4513"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginBottom="12dp"/>
 
                     <Button
+                        android:id="@+id/btnOrangeConfirm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FF9800"
-                        android:paddingHorizontal="24dp"
+                        android:paddingHorizontal="32dp"
                         android:paddingVertical="8dp"
-                        android:text="ตกลง"
+                        android:text="เพิ่ม Stock"
                         android:textColor="#8B4513"
                         android:textSize="16sp"
                         android:textStyle="bold"/>
@@ -216,8 +242,5 @@
         </LinearLayout>
 
     </ScrollView>
-
-    <!-- Bottom Navigation -->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
